@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animal Crossing: New Horizons Villagers</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Animal Crossing Villager Searcher</h1>
+    <h3>Search for a specific villager</h3>
+
+    <form action="gresponse", method="post">
+        <label for="villager">Please type in a villager's name:</label>
+        <input type="text" id="villager" name="villager_name">
+        <input type="submit" value="Search" name="button"><br>
+    </form><br>
+
+    <form action="birthday", method="post">
+        <h3>Filter villagers by birth month!</h3>
+        <label for="jan">January</label>
+        <input type="checkbox" name="birth_month" value="January" id="jan"><br>
+
+        <label for="feb">February</label>
+        <input type="checkbox" name="birth_month" value="February" id="feb"><br>
+
+        <label for="mar">March</label>
+        <input type="checkbox" name="birth_month" value="March" id="mar"><br>
+
+        <label for="apr">April</label>
+        <input type="checkbox" name="birth_month" value="April" id="apr"><br>
+
+        <label for="may">May</label>
+        <input type="checkbox" name="birth_month" value="May" id="may"><br>
+
+        <label for="jun">June</label>
+        <input type="checkbox" name="birth_month" value="June" id="jun"><br>
+
+        <label for="july">July</label>
+        <input type="checkbox" name="birth_month" value="July" id="july"><br>
+
+        <label for="aug">August</label>
+        <input type="checkbox" name="birth_month" value="August" id="aug"><br>
+
+        <label for="sept">September</label>
+        <input type="checkbox" name="birth_month" value="September" id="sept"><br>
+
+        <label for="oct">October</label>
+        <input type="checkbox" name="birth_month" value="October" id="oct"><br>
+
+        <label for="nov">November</label>
+        <input type="checkbox" name="birth_month" value="November" id="nov"><br>
+
+        <label for="dec">December</label>
+        <input type="checkbox" name="birth_month" value="December" id="dec"><br>
+
+        <input type="submit" value="Search" name="button">
+    </form><br>
+
+
+    {% if prompt%}
+      <div class="formtitle">{{prompt}}</div>
+    {% endif %}
+</body>
+</html>

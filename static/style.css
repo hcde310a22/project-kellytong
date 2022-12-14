@@ -1,0 +1,25 @@
+body {  /* background for all html pages */
+    background-image: url('/static/background.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#name {     /* center villager name for results page */
+    text-align: center;
+}
+
+#info {     /* center villager info on results page */
+    text-align: center;
+}
+
+#pic {      /* center villager picture on results page */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animal {       /* separate villager picture and info into columns */
+    column-count: 4;
+    margin-bottom: 100px;
+}

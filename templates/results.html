@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animal Crossing: New Horizons Villagers</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <h1 id="name">{{villager.name}}</h1>
+
+  <h3><a href="/">Search for a different villager?</a></h3>
+
+  <img src="{{villager.make_photo_url()}}" alt="{{villager.name}}" id="pic">
+  <div id="info">
+      <p><b>Name:</b> {{villager.name}}</p>
+      <p><b>Personality:</b> {{villager.personality}}</p>
+      <p><b>Birthday:</b> {{villager.birthday}}</p>
+      <p><b>Species:</b> {{villager.species}}</p>
+      <p><b>Gender:</b> {{villager.gender}}</p>
+      <p><b>Saying:</b> {{villager.phrase}}</p>
+      <p><b>Hobby:</b> {{villager.hobby}}</p>
+  </div>
+</body>
+</html>

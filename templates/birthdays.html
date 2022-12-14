@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Villagers born in: {{birthdays}}</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='style.css') }}">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h2>Villagers born in:&ensp;
+        {% for month in birthdays%}
+            {{month}}&ensp;
+        {% endfor %}
+    </h2>
+
+    <h3><a href="/">Back to main page</a></h3><br>
+
+    {% for villager in villagers %}
+    <div class = "animal">
+        <img src="{{villager.make_photo_url()}}" alt="{{villager.name}}" height="256">
+        <p><b>Name:</b> {{villager.name}}</p>
+        <p><b>Personality:</b> {{villager.personality}}</p>
+        <p><b>Birthday:</b> {{villager.birthday}}</p>
+        <p><b>Species:</b> {{villager.species}}</p>
+        <p><b>Gender:</b> {{villager.gender}}</p>
+        <p><b>Saying:</b> {{villager.phrase}}</p>
+        <p><b>Hobby:</b> {{villager.hobby}}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
